@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+}
+
+.circle-container {
+    display: flex;
+    gap: 100px; /* تعديل المسافة بين الدوائر */
+}
+
+.circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgb(0, 28, 119);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* لون النص */
+    text-decoration: none; 
+    font-size: 20px;
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+
+.circle:hover {
+    transform: scale(1.2); /* تأثير التكبير عند تمرير الماوس */
+}
+
+.star {
+    position: absolute;
+    background-color: #ffffff; /* لون النجوم الأبيض */
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+/* تأثير الوميض */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    75% { opacity: 1; transform: scale(1.2); }
+}
